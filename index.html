@@ -6,6 +6,13 @@
     </head>
     <body>
         <input is="sw-input" />
-        <sw-signup></sw-signup>
+        <hb-signup></hb-signup>
+        <section>
+            <label for="tpi">Name:</label>
+            <input id="tpi" aria-describedby="tp" />
+            <sw-tooltip id="tp">Please enter your name</sw-tooltip>
+            <img src="https://via.placeholder.com/50x50" aria-describedby="tpfood" tabindex="10"/>
+            <sw-tooltip id="tpfood">Picture of your favorite food</sw-tooltip>
+        </section>
     </body>
 </html>
