@@ -14,3 +14,6 @@ customElements.define("sw-panel", SwPanel)
 
 import TpUl from "./tags/tp-ul.mjs"
 customElements.define("tp-ul", TpUl, {extends: "ul"})
+
+import SwInfoCard from "./elements/sw-info-card.mjs"
+customElements.define("sw-info-card", SwInfoCard)
