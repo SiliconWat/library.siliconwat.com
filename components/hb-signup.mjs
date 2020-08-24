@@ -1,6 +1,6 @@
 import {css, html} from "../render.mjs"
 
-export class Signup extends HTMLElement {
+export class HbSignup extends HTMLElement {
     constructor() {
         super()
         const shadow = this.attachShadow({mode: "open"})
