@@ -5,7 +5,7 @@ template.innerHTML = `
 <p>This is fruit</p>
 `
 
-class SwHeroCard extends HTMLELement{
+export class SwHeroCard extends HTMLELement{
     constructor(){
         super();
         this.attachShadow({mode:"open"});
