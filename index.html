@@ -65,10 +65,30 @@
             </sw-info-card>
         </section>
         <section>
-            <sw-hero-card></sw-hero-card>
+            <sw-hero-card>
+                <h3 slot="title">Fruit</h3>
+                <img slot="picture" src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/><img src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/>
+                <p slot="description">Hero Only</p>
+            </sw-hero-card>
         </section>
         <section>
-            <sw-search></sw-search>
+            <sw-search>
+                <input placeholder="search user" slot="text" />
+                <button slot="search-button">Search</button>
+            </sw-search>
+        </section>
+        <section>
+            <sw-progress>
+                <label slot="label">Progress</label>
+                <progress slot="bar" value="50" max="100"></progress>
+            </sw-progress>
+        </section>
+        <section>
+            <hb-avatar>
+                <img src="https://lh3.googleusercontent.com/46rSiA41hKKjTJ19If8WbNXYJ3H5268Y0BLo2Cr5X0aDwKMPdQdFaGfE8r2-Evza_SJf=s85" slot="image" />
+                <label slot="label">Change Photo</label>
+                <input type="file" slot="upload-image"/>
+            </hb-avatar>
         </section>
 
 

@@ -23,3 +23,9 @@ customElements.define("sw-hero-card", SwHeroCard, )
 
 import {SwSearch} from "./elements/sw-search.mjs"
 customElements.define("sw-search", SwSearch)
+
+import {SwProgress} from "./elements/sw-progress.mjs"
+customElements.define("sw-progress", SwProgress)
+
+import {HbAvatar} from "./components/hb-avatar.mjs"
+customElements.define("hb-avatar", HbAvatar)

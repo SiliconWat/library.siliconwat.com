@@ -1,8 +1,19 @@
 const template = document.createElement("template");
 template.innerHTML = `
-<h3>Title</h3>
-<img src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/>
-<p>This is fruit</p>
+    <style>
+        ::slotted(h3) {
+            color: blue;
+        }
+        ::slotted(img) {
+            border: 2px solid blue;
+        }
+        ::slotted(p) {
+            color: gray;
+        }
+    </style>
+    <slot name="title"></slot>
+    <slot name="picture"></slot>
+    <slot name="description"></slot>
 `
 
 export class SwHeroCard extends HTMLElement{
