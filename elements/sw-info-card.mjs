@@ -1,9 +1,20 @@
 const template = document.createElement("template");
 template.innerHTML = `
-<h3>Account</h3>
-<p>Name</p>
+    <style>
+        :host {
+            display: block;
+            border: 1px solid grey;
+        }
+        ::slotted(h3) {
+            color: blue;
+        }
+        ::slotted(p) {
+            color: green;
+        }
+    </style>
+    <slot name="title"></slot>
+    <slot name="description"></slot>
 `
-
 
 export default class SwInfoCard extends HTMLElement{
     constructor(){
