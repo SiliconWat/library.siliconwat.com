@@ -1,8 +1,8 @@
-import { TpInput } from "./tags/tp-input.mjs"
+import TpInput from "./tags/tp-input.mjs"
 customElements.define("tp-input", TpInput, {extends: "input"})
 
-import { HbSignup } from "./components/hb-signup.mjs"
-customElements.define("hb-signup", HbSignup)
+//import HbSignup from "./components/hb-signup.mjs"
+//customElements.define("hb-signup", HbSignup)
 
 import SwTooltip from "./elements/sw-tooltip.mjs"
 customElements.define("sw-tooltip", SwTooltip)

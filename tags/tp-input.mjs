@@ -1,4 +1,4 @@
-export class TpInput extends HTMLInputElement {
+export default class TpInput extends HTMLInputElement {
     constructor() {
         super()
         this.style.outline = "2px solid red"
