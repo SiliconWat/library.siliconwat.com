@@ -17,3 +17,9 @@ customElements.define("tp-ul", TpUl, {extends: "ul"})
 
 import SwInfoCard from "./elements/sw-info-card.mjs"
 customElements.define("sw-info-card", SwInfoCard)
+
+import SwHeroCard from "./elements/sw-hero-card.mjs"
+customElements.define("sw-hero-card", SwHeroCard, )
+
+import SwSearch from "./elements/sw-search.mjs"
+customElements.define("sw-search", SwSearch)
