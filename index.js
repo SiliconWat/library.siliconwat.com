@@ -35,3 +35,9 @@ customElements.define("hb-card-payment", HbCardPayment)
 
 import {HbAccount} from "./components/hb-account.mjs"
 customElements.define("hb-account", HbAccount)
+
+import {HbLogin} from "./components/hb-login.mjs"
+customElements.define("hb-login", HbLogin)
+
+import {HbSignup} from "./components/hb-signup.mjs"
+customElements.define("hb-signup", HbSignup)

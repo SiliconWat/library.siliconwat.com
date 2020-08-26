@@ -99,52 +99,57 @@
                 </form slot="form">
                 <form>
                 <label slot="label">Change Username:</label>
-                <input placeholder="New Username" />
-                <input type="submit" />
+                <input slot="input" placeholder="New Username" />
+                <input slot="input" type="submit" />
                 </form>
-                <form>
-                <label>Change Email:</label>
-                <input placeholder="New Email" />
-                <input type="password" placeholder="Current Password" />
-                <input type="submit" />
+                <form slot="form">
+                <label slot="label">Change Email:</label>
+                <input slot="input" placeholder="New Email" />
+                <input slot="input" type="password" placeholder="Current Password" />
+                <input slot="input" type="submit" />
                 </form>
-                <form>
-                <label>Change Password:</label>
-                <input placeholder="New Password" />
-                <input type="password" placeholder="Current Password" />
-                <input type="submit" />
+                <form slot="form">
+                <label slot="label">Change Password:</label>
+                <input slot="input" placeholder="New Password" />
+                <input slot="input" type="password" placeholder="Current Password" />
+                <input slot="input" type="submit" />
                 </form>
-                <form>
-                <label>Delete Account:</label>
-                <input type="password" placeholder="Current Password" />
+                <form slot="form">
+                <label slot="label">Delete Account:</label>
+                <input slot="input" type="password" placeholder="Current Password" />
                 <input slot="input" type="submit" />
                 </form>
             </hb-account>
         </section>
         <section>
             <hb-card-payment>
-            <h2>Payment Settings</h2>
-            <h3>Credit Card</h3>
-            <form>
-              <label>Name on card:</label>
-              <input placeholder="Name on card" />
-              <label>Card number:</label>
-              <input placeholder="Card number" />
-              <label>Expiration date:</label>
-              <input type="date" placeholder="Expiration date" />
-              <label>Security code</label>
-              <input placeholder="Security code" />
-              <input type="submit" />
-            </form>
-            <h3>Transactions via HeartBank&reg;</h3>
-            <form>
-              <label>Commitment Deposit:</label>
-              <input placeholder="Amount to deposit" />
-              <input type="date" placeholder="Deadline" />
-              <input type="submit" />
-              <aside>link to ethereum for proof</aside>
-            </form>
+                <h2 slot="paymentsection">Payment Settings</h2>
+                <h3 slot="title">Credit Card</h3>
+                <label slot="label">Name on card:</label>
+                <input slot="input" placeholder="Name on card" />
+                <label slot="label">Card number:</label>
+                <input slot="input" placeholder="Card number" />
+                <label slot="label">Expiration date:</label>
+                <input slot="input" type="date" placeholder="Expiration date" />
+                <label slot="label">Security code</label>
+                <input slot="input" placeholder="Security code" />
+                <input slot="input" type="submit" />
             </hb-card-payment>
+        </section>
+        <section>
+            <hb-login>
+                <input slot="username" id="email" type="email" placeholder="Email"/>
+                <input slot="password"  type="password" placeholder="Password"/>
+                <input slot="login" id="login" type="submit" value="Log in" onclick="login()"/>
+                <input slot="forgot" type="submit" id="forgotpassword" value="Forgot password" onclick="forgotPassword()"/>
+            </hb-login>
+      </section>
+        <section>
+            <hb-signup>
+                <input slot="username"  type="email" placeholder="Email"/>
+                <input slot="password"  type="password" placeholder="Password"/>
+                <input slot="register" type="submit" value="sign up" onclick="login()"/>
+            </hb-signup>
         </section>
     </body>
 </html>

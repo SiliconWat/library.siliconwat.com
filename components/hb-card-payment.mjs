@@ -1,24 +1,29 @@
 const template = document.createElement("template");
 template.innerHTML = `
-    <script>
-    ::slotted(h2) {
+    <style>
+        ::slotted(h2) {
         color: blue;
     }
-    ::slotted(h3) {
+        ::slotted(h3) {
         color: blue;
     }
-    ::slotted(label) {
+        ::slotted(label) {
         color: blue;
     }
-    ::slotted(input) {
+        ::slotted(input) {
         border: 2px solid blue;
     }
-    </script>
+        ::slotted(form) {
+        border: 2px solid blue;
+    }
+    </style>
 
-    <slot name="paymentSection"></slot>
-    <slot name="paytitle"></slot>
-    <slot name="label"></slot>
-    <slot name="input"></slot>
+    <slot name="paymentsection"></slot>
+    <slot name="title"></slot>
+    <form>
+        <slot name="label"></slot>
+        <slot name="input"></slot>
+    </form>
     
     `
 
