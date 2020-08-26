@@ -90,7 +90,61 @@
                 <input type="file" slot="upload-image"/>
             </hb-avatar>
         </section>
-
-
+        <section>
+            <hb-account>  
+                <h2 slot="title">Account Settings</h2>
+                <form slot="form">
+                <b slot="email">pan@siliconwat.com</b>
+                <input slot="input" type="submit" value="Send Email Verification"/>
+                </form slot="form">
+                <form>
+                <label slot="label">Change Username:</label>
+                <input placeholder="New Username" />
+                <input type="submit" />
+                </form>
+                <form>
+                <label>Change Email:</label>
+                <input placeholder="New Email" />
+                <input type="password" placeholder="Current Password" />
+                <input type="submit" />
+                </form>
+                <form>
+                <label>Change Password:</label>
+                <input placeholder="New Password" />
+                <input type="password" placeholder="Current Password" />
+                <input type="submit" />
+                </form>
+                <form>
+                <label>Delete Account:</label>
+                <input type="password" placeholder="Current Password" />
+                <input slot="input" type="submit" />
+                </form>
+            </hb-account>
+        </section>
+        <section>
+            <hb-card-payment>
+            <h2>Payment Settings</h2>
+            <h3>Credit Card</h3>
+            <form>
+              <label>Name on card:</label>
+              <input placeholder="Name on card" />
+              <label>Card number:</label>
+              <input placeholder="Card number" />
+              <label>Expiration date:</label>
+              <input type="date" placeholder="Expiration date" />
+              <label>Security code</label>
+              <input placeholder="Security code" />
+              <input type="submit" />
+            </form>
+            <h3>Transactions via HeartBank&reg;</h3>
+            <form>
+              <label>Commitment Deposit:</label>
+              <input placeholder="Amount to deposit" />
+              <input type="date" placeholder="Deadline" />
+              <input type="submit" />
+              <aside>link to ethereum for proof</aside>
+            </form>
+            </hb-card-payment>
+        </section>
     </body>
 </html>

@@ -29,3 +29,9 @@ customElements.define("sw-progress", SwProgress)
 
 import {HbAvatar} from "./components/hb-avatar.mjs"
 customElements.define("hb-avatar", HbAvatar)
+
+import {HbCardPayment} from "./components/hb-card-payment.mjs"
+customElements.define("hb-card-payment", HbCardPayment)
+
+import {HbAccount} from "./components/hb-account.mjs"
+customElements.define("hb-account", HbAccount)
