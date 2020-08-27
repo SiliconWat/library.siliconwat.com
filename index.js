@@ -41,3 +41,6 @@ customElements.define("hb-login", HbLogin)
 
 import {HbSignup} from "./components/hb-signup.mjs"
 customElements.define("hb-signup", HbSignup)
+
+import {SwCountDown} from "./elements/sw-countdown.mjs"
+customElements.define("sw-countdown", SwCountDown)
