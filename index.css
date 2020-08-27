@@ -1,27 +1,7 @@
-sw-tab {
-    border: 1px solid black;
-    padding: 20px;
-  }
-  sw-panel {
-    padding: 20px;
-    background-color: lightgray;
-  }
-  sw-tab[selected] {
-    background-color: bisque;
-  }
+@import "./elements/sw-tabs.css";
+@import "./tags/tp-ul.css";
+@import "./elements/sw-timer.css";
 
-  sw-tabs:not(:defined), sw-tab:not(:defined), sw-panel:not(:defined) {
-    display: block;
-  }
 
-ul {
-    list-style-type: none;
-}
 
-.open::before {
-    content: "[-] ";
-}
 
-.closed::before {
-    content: "[+] ";
-}

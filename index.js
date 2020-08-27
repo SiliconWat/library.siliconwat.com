@@ -44,3 +44,6 @@ customElements.define("hb-signup", HbSignup)
 
 import {SwCountDown} from "./elements/sw-countdown.mjs"
 customElements.define("sw-countdown", SwCountDown)
+
+import {SwTimer} from "./elements/sw-timer.mjs"
+customElements.define("sw-timer", SwTimer)

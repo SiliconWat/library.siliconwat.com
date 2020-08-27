@@ -1,0 +1,15 @@
+sw-tab {
+    border: 1px solid black;
+    padding: 20px;
+  }
+  sw-panel {
+    padding: 20px;
+    background-color: lightgray;
+  }
+  sw-tab[selected] {
+    background-color: bisque;
+  }
+
+  sw-tabs:not(:defined), sw-tab:not(:defined), sw-panel:not(:defined) {
+    display: block;
+  }

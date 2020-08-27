@@ -1,0 +1,7 @@
+sw-timer form label {
+    border: 1px solid green;
+}
+
+sw-timer[summer] form label {
+    border: 1px solid orange;
+}
