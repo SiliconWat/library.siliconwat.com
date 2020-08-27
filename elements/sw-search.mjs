@@ -1,8 +1,18 @@
 
 const template = document.createElement("template");
 template.innerHTML = `
-<input placeholder="Search User"/>
-<button>Search</button>
+    <style>
+        ::slotted(input) {
+            border: 2px solid blue;
+        }
+        ::slotted(button) {
+            border: 2px solid blue;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+    <slot name="text"></slot>
+    <slot name="search-button"></slot>
 `
 export class SwSearch extends HTMLElement {
     constructor() {
