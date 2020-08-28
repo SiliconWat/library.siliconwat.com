@@ -5,15 +5,8 @@ template.innerHTML = `
             display: block;
             border: 1px solid grey;
         }
-        ::slotted(h3) {
-            color: blue;
-        }
-        ::slotted(p) {
-            color: green;
-        }
     </style>
-    <slot name="title"></slot>
-    <slot name="description"></slot>
+    <slot></slot>
 `
 
 export default class SwInfoCard extends HTMLElement{

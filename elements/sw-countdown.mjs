@@ -1,20 +1,11 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
-        ::slotted(label) {
-            font-weight: bold;
-            font-size: 2em;
-        }
-        ::slotted(h3) {
-            color: blue;
-        }
-        ::slotted(h4) {
-            color: blue;
+        :host {
+            display: block;
         }
     </style>
-    <slot name="title"></slot>
-    <slot name="days"></slot>
-    <slot name="time"></slot>
+    <slot></slot>
 `
 
 export class SwCountDown extends HTMLElement {
