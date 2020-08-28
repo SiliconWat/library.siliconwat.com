@@ -1,11 +1,9 @@
 const template = document.createElement("template")
 template.innerHTML = `
     <style>
-        ::slotted(input) {
-            padding: 5px;
-            border: 2px solid blue;
+        :host {
+            
         }
- 
     </style>
     <form>
         <slot name="username"></slot>

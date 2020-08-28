@@ -3,3 +3,12 @@
 @import "./elements/sw-timer.css";
 @import "./elements/sw-countdown.css";
 @import "./elements/sw-info-card.css";
+@import "./elements/sw-hero-card.css";
+@import "./elements/sw-progress.css";
+@import "./elements/sw-search.css";
+@import "./components/hb-account.css";
+@import "./components/hb-card-payment.css";
+@import "./components/hb-avatar.css";
+@import "./components/hb-login.css";
+@import "./components/hb-signup.css";
+

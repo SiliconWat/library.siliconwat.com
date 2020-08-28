@@ -1,0 +1,9 @@
+hb-avatar img {
+    border: 5px inset blue;
+}
+hb-avatar label {
+    color: blue;
+}
+hb-avatar input {
+    outline: 2px solid blue;
+}

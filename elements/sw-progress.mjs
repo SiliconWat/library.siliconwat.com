@@ -1,18 +1,12 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
-    ::slotted(label) {
-        color: blue;
-    }
-    ::slotted(progress){
-        border: 2px solid blue;
-        background-color: white;
-    }
+        :host {
+            display: block
+        }
     </style>
-    <slot name="label"></slot>
-    <slot name="bar"></slot>
-`
-  
+    <slot></slot>
+    `
 
 export class SwProgress extends HTMLElement{
     constructor(){

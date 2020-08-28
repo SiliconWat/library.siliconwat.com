@@ -1,0 +1,9 @@
+sw-hero-card h3 {
+    color: blue;
+}
+sw-hero-card img {
+    border: 2px solid blue;
+}
+sw-hero-card p {
+    color: gray;
+}
