@@ -5,12 +5,9 @@ template.innerHTML = `
             
         }
     </style>
-    <form>
-        <slot name="username"></slot>
-        <slot name="password"></slot>
-        <slot name="login"></slot>
-        <slot name="forgot"></slot>
-    </form>
+    <slot>
+        <form></form>
+    </slot>
         
 `
 export class HbLogin extends HTMLElement {
