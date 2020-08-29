@@ -26,10 +26,28 @@ export class SwTimer extends HTMLElement {
         //console.log(event.composedPath())
         event.preventDefault()
         const hours = this.querySelector("input[name=hours]")
-        console.log(hours.value)
-        const data = new FormData(event.target)
-        console.log(data.get("minutes"))
+        const minutes = this.querySelector("input[name=minutes]")
+        const seconds = this.querySelector("input[name=seconds]")
+        
+        const countdown = setInterval(() => {
+            if (hours.value == 0 && minutes.value == 0 && seconds.value == 0) {
+                clearInterval(countdown)
+            }    
+            else {
+                if (seconds.value == 0) {
+                    seconds.value = 60
+                    if (minutes.value == 0) {
+                        hours.value = Number(hours.value) - 1
+                        minutes.value = 60
+                    }
+                    minutes.value = Number(minutes.value) - 1
+                }
+                seconds.value = Number(seconds.value) - 1
+            }
+        }, 1000);
+        
+        //const data = new FormData(event.target)
+        //console.log(data.get("minutes"))
     }
-
 
 }

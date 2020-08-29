@@ -1,7 +1,5 @@
 @import "./elements/sw-tabs.css";
 @import "./tags/tp-ul.css";
 @import "./elements/sw-timer.css";
-
-
-
-
+@import "./elements/sw-countdown.css";
+@import "./elements/sw-info-card.css";
