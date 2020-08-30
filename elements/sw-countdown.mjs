@@ -14,4 +14,5 @@ export class SwCountDown extends HTMLElement {
         this.attachShadow({mode: "open"});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
+    
 }

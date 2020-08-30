@@ -4,19 +4,8 @@ template.innerHTML = `
         :host {
             display: block;
         }
-        ::slotted(img){
-            border: 5px inset blue;
-        }
-        ::slotted(label){
-            color: blue;
-        }
-        ::slotted(input){
-            outline: 2px solid blue;
-        }
     </style>
-    <slot name="image"></slot>
-    <slot name="label"></slot>
-    <slot name="upload-image"></slot>
+    <slot></slot>
 `
 export class HbAvatar extends HTMLElement{
     constructor(){

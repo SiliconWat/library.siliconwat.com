@@ -1,0 +1,15 @@
+hb-card-payment h2 {
+    color: blue;
+}
+hb-card-payment h3 {
+    color: blue;
+}
+hb-card-payment label {
+    color: blue;
+}
+hb-card-payment input {
+    border: 2px solid blue;
+}
+hb-card-payment form {
+    border: 2px solid blue;
+}

@@ -1,18 +1,13 @@
 const template = document.createElement("template")
 template.innerHTML = `
     <style>
-        ::slotted(input) {
-            padding: 5px;
-            border: 2px solid blue;
+        :host {
+            
         }
- 
     </style>
-    <form>
-        <slot name="username"></slot>
-        <slot name="password"></slot>
-        <slot name="login"></slot>
-        <slot name="forgot"></slot>
-    </form>
+    <slot>
+        <form></form>
+    </slot>
         
 `
 export class HbLogin extends HTMLElement {

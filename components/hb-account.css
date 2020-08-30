@@ -1,0 +1,17 @@
+hb-account form {
+    border: 2px solid blue;
+}
+hb-account h2 {
+    color: green;
+}
+hb-account b {
+    color:blue;
+}   
+hb-account label {
+    color: blue;
+}
+hb-account input {
+    border: 2px solid blue;
+    color: white;
+
+}   

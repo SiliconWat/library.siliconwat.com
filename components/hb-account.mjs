@@ -1,28 +1,13 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
-        ::slotted(form) {
-            border: 2px solid blue;
-        }
-        ::slotted(h3) {
-            color:blue;
-        }
-        ::slotted(b) {
-            color:blue;
-        }
-        ::slotted(label) {
-            color: blue;
-        }
-        ::slotted(input) {
-            border: 2px solid blue;
-            color: white;
+        :host {
+            
         }
     </style>
-    <slot name="title"></slot>
-    <slot name="form"></slot>
-    <slot name="email"></slot>
-    <slot name="label"></slot>
-    <slot name="input"></slot>
+    <slot>
+        <form></form>
+    </slot>
     `
 
 export class HbAccount extends HTMLElement{

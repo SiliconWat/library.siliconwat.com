@@ -66,58 +66,58 @@
         </section>
         <section>
             <sw-hero-card>
-                <h3 slot="title">Fruit</h3>
-                <img slot="picture" src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/><img src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/>
-                <p slot="description">Hero Only</p>
+                <h3>Fruit</h3>
+                <img src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/><img src="https://lh3.googleusercontent.com/n5YVojZbLIb2r9pLSVjZ0WdMqUX-ydO9PntNZF_-yl1PVFDw9ZX8u9Xhk_nVbasu_CtAiBo=s149"/>
+                <p>Hero Only</p>
             </sw-hero-card>
         </section>
         <section>
             <sw-search>
-                <input placeholder="search user" slot="text" />
-                <button slot="search-button">Search</button>
+                <input placeholder="search user" />
+                <button>Search</button>
             </sw-search>
         </section>
         <section>
             <sw-progress>
-                <label slot="label">Progress</label>
-                <progress slot="bar" value="50" max="100"></progress>
+                <label>Progress</label>
+                <progress value="50" max="100"></progress>
             </sw-progress>
         </section>
         <section>
             <hb-avatar>
                 <img src="https://lh3.googleusercontent.com/46rSiA41hKKjTJ19If8WbNXYJ3H5268Y0BLo2Cr5X0aDwKMPdQdFaGfE8r2-Evza_SJf=s85" slot="image" />
-                <label slot="label">Change Photo</label>
+                <label >Change Photo</label>
                 <input type="file" slot="upload-image"/>
             </hb-avatar>
         </section>
         <section>
             <hb-account>  
-                <h2 slot="title">Account Settings</h2>
-                <form slot="form">
-                <b slot="email">pan@siliconwat.com</b>
-                <input slot="input" type="submit" value="Send Email Verification"/>
-                </form slot="form">
+                <h2>Account Settings</h2>
                 <form>
-                <label slot="label">Change Username:</label>
-                <input slot="input" placeholder="New Username" />
-                <input slot="input" type="submit" />
+                <b>pan@siliconwat.com</b>
+                <input type="submit" value="Send Email Verification"/>
                 </form>
-                <form slot="form">
-                <label slot="label">Change Email:</label>
-                <input slot="input" placeholder="New Email" />
-                <input slot="input" type="password" placeholder="Current Password" />
-                <input slot="input" type="submit" />
+                <form>
+                <label>Change Username:</label>
+                <input placeholder="New Username" />
+                <input type="submit" />
                 </form>
-                <form slot="form">
-                <label slot="label">Change Password:</label>
-                <input slot="input" placeholder="New Password" />
-                <input slot="input" type="password" placeholder="Current Password" />
-                <input slot="input" type="submit" />
+                <form>
+                <label >Change Email:</label>
+                <input placeholder="New Email" />
+                <input type="password" placeholder="Current Password" />
+                <input type="submit" />
                 </form>
-                <form slot="form">
-                <label slot="label">Delete Account:</label>
-                <input slot="input" type="password" placeholder="Current Password" />
-                <input slot="input" type="submit" />
+                <form >
+                <label >Change Password:</label>
+                <input placeholder="New Password" />
+                <input type="password" placeholder="Current Password" />
+                <input type="submit" />
+                </form>
+                <form>
+                <label >Delete Account:</label>
+                <input type="password" placeholder="Current Password" />
+                <input type="submit" />
                 </form>
             </hb-account>
         </section>
@@ -125,30 +125,30 @@
             <hb-card-payment>
                 <h2 slot="paymentsection">Payment Settings</h2>
                 <h3 slot="title">Credit Card</h3>
-                <label slot="label">Name on card:</label>
-                <input slot="input" placeholder="Name on card" />
-                <label slot="label">Card number:</label>
-                <input slot="input" placeholder="Card number" />
-                <label slot="label">Expiration date:</label>
-                <input slot="input" type="date" placeholder="Expiration date" />
-                <label slot="label">Security code</label>
-                <input slot="input" placeholder="Security code" />
-                <input slot="input" type="submit" />
+                <label >Name on card:</label>
+                <input placeholder="Name on card" />
+                <label >Card number:</label>
+                <input placeholder="Card number" />
+                <label >Expiration date:</label>
+                <input type="date" placeholder="Expiration date" />
+                <label >Security code</label>
+                <input placeholder="Security code" />
+                <input type="submit" />
             </hb-card-payment>
         </section>
         <section>
             <hb-login>
-                <input slot="username" id="email" type="email" placeholder="Email"/>
-                <input slot="password"  type="password" placeholder="Password"/>
-                <input slot="login" id="login" type="submit" value="Log in" onclick="login()"/>
-                <input slot="forgot" type="submit" id="forgotpassword" value="Forgot password" onclick="forgotPassword()"/>
+                <input id="email" type="email" placeholder="Email"/>
+                <input type="password" placeholder="Password"/>
+                <input id="login" type="submit" value="Log in" onclick="login()"/>
+                <input type="submit" id="forgotpassword" value="Forgot password" onclick="forgotPassword()"/>
             </hb-login>
       </section>
         <section>
             <hb-signup>
-                <input slot="username"  type="email" placeholder="Email"/>
-                <input slot="password"  type="password" placeholder="Password"/>
-                <input slot="register" type="submit" value="sign up" onclick="login()"/>
+                <input  type="email" placeholder="Email"/>
+                <input  type="password" placeholder="Password"/>
+                <input  type="submit" value="sign up" onclick="login()"/>
             </hb-signup>
         </section>
         <section>

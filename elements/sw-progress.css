@@ -1,0 +1,7 @@
+sw-progress label {
+    color: blue;
+}
+sw-progress progress {
+    border: 2px solid blue;
+    background-color: white;
+}

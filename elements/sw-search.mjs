@@ -2,17 +2,11 @@
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
-        ::slotted(input) {
-            border: 2px solid blue;
-        }
-        ::slotted(button) {
-            border: 2px solid blue;
-            background-color: blue;
-            color: white;
-        }
+      :host {
+          display: block;
+      }
     </style>
-    <slot name="text"></slot>
-    <slot name="search-button"></slot>
+    <slot></slot>
 `
 export class SwSearch extends HTMLElement {
     constructor() {
