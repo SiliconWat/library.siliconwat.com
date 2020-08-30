@@ -1,3 +1,5 @@
+import {SetInterval} from "../utils/SetTimeout.mjs"
+
 const template = document.createElement("template");
 template.innerHTML = `
     <style>
@@ -23,16 +25,15 @@ export class SwTimer extends HTMLElement {
     }
 
     start(event) {
-        //console.log(event.composedPath())
         event.preventDefault()
         const hours = this.querySelector("input[name=hours]")
         const minutes = this.querySelector("input[name=minutes]")
         const seconds = this.querySelector("input[name=seconds]")
-        
-        const countdown = setInterval(() => {
+
+        const timer = new SetInterval(() => {
             if (hours.value == 0 && minutes.value == 0 && seconds.value == 0) {
-                clearInterval(countdown)
-            }    
+                timer.stop()
+            }
             else {
                 if (seconds.value == 0) {
                     seconds.value = 60
@@ -44,7 +45,34 @@ export class SwTimer extends HTMLElement {
                 }
                 seconds.value = Number(seconds.value) - 1
             }
-        }, 1000);
+        }, 1000)
+
+        timer.start()
+    }
+
+    _start(event) {
+        //console.log(event.composedPath())
+        event.preventDefault()
+        const hours = this.querySelector("input[name=hours]")
+        const minutes = this.querySelector("input[name=minutes]")
+        const seconds = this.querySelector("input[name=seconds]")
+        
+        const countdown = setInterval(() => {
+            if (hours.value == 0 && minutes.value == 0 && seconds.value == 0) {
+                clearInterval(countdown)
+            }
+            else {
+                if (seconds.value == 0) {
+                    seconds.value = 60
+                    if (minutes.value == 0) {
+                        hours.value = Number(hours.value) - 1
+                        minutes.value = 60
+                    }
+                    minutes.value = Number(minutes.value) - 1
+                }
+                seconds.value = Number(seconds.value) - 1
+            }
+        }, 1000)
         
         //const data = new FormData(event.target)
         //console.log(data.get("minutes"))

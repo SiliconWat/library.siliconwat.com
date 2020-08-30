@@ -14,5 +14,11 @@ export class SwCountDown extends HTMLElement {
         this.attachShadow({mode: "open"});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
     }
+
+    start() {
+        const hours = this.querySelector("h4 span")
+        const minutes = this.querySelector("input[name=minutes]")
+        const seconds = this.querySelector("input[name=seconds]")
+    }
     
 }
