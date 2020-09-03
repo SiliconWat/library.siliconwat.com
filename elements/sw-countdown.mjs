@@ -33,6 +33,7 @@ export class SwCountDown extends HTMLElement {
         const timer = new SetInterval(() => {
             if (days.textContent == 0 && hours.textContent == 0 && minutes.textContent == 0 && seconds.textContent == 0) {
                 timer.stop()
+                this.dispatchEvent(new Event("done"))
             }
             else {
                 if (seconds.textContent == 0) {

@@ -154,8 +154,8 @@
         <section>
             <sw-countdown>
                 <h3>
-                    <span>1</span>
-                    <span>day</span> 
+                    <span>0</span>
+                    <span>days</span> 
                     left
                 </h3>
                 <h4>
@@ -171,8 +171,8 @@
             <sw-timer summer>
                 <form>
                     <label>Study Time</label>
-                    <input name="hours" type="number" value="0" placeholder="hours"/>:
-                    <input name="minutes" type="number" value="0" placeholder="minutes"/>:
+                    <input name="hours" type="number" value="0" placeholder="hours" max="24" min="0" step="1"/>:
+                    <input name="minutes" type="number" value="0" placeholder="minutes" max="60" min="0" step="1"/>:
                     <input name="seconds" type="number" value="3" placeholder="seconds" disabled/>
                     <button type="submit">Start Countdown</button>
                 </form>

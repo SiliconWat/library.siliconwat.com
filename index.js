@@ -47,3 +47,6 @@ customElements.define("sw-countdown", SwCountDown)
 
 import {SwTimer} from "./elements/sw-timer.mjs"
 customElements.define("sw-timer", SwTimer)
+
+const countdown = document.querySelector("sw-countdown")
+countdown.addEventListener("done", () => alert("Surprise! You win!"))

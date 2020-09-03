@@ -60,6 +60,7 @@ export class SwTimer extends HTMLElement {
         const countdown = setInterval(() => {
             if (hours.value == 0 && minutes.value == 0 && seconds.value == 0) {
                 clearInterval(countdown)
+                this.dispatchEvent(new Event("done"))
             }
             else {
                 if (seconds.value == 0) {
