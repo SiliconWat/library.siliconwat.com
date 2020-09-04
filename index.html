@@ -138,17 +138,21 @@
         </section>
         <section>
             <hb-login>
-                <input id="email" type="email" placeholder="Email"/>
-                <input type="password" placeholder="Password"/>
-                <input id="login" type="submit" value="Log in" onclick="login()"/>
-                <input type="submit" id="forgotpassword" value="Forgot password" onclick="forgotPassword()"/>
+                <form>
+                    <input id="email" type="email" placeholder="Email"/>
+                    <input type="password" placeholder="Password"/>
+                    <input id="login" type="submit" value="Log in" onclick="login()"/>
+                    <input type="submit" id="forgotpassword" value="Forgot password" onclick="forgotPassword()"/>
+                </form>
             </hb-login>
       </section>
         <section>
             <hb-signup>
-                <input  type="email" placeholder="Email"/>
-                <input  type="password" placeholder="Password"/>
-                <input  type="submit" value="sign up" onclick="login()"/>
+                <form>
+                    <input type="email" name="email" placeholder="Email"/>
+                    <input type="password" name="password" placeholder="Password"/>
+                    <button type="submit">Sign Up</button>
+                </form>
             </hb-signup>
         </section>
         <section>

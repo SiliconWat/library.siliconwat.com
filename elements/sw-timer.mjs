@@ -26,6 +26,7 @@ export class SwTimer extends HTMLElement {
 
     start(event) {
         event.preventDefault()
+        
         const hours = this.querySelector("input[name=hours]")
         const minutes = this.querySelector("input[name=minutes]")
         const seconds = this.querySelector("input[name=seconds]")
