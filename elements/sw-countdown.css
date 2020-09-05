@@ -1,6 +1,37 @@
 sw-countdown h3 {
-    color: blue;
+    color: hotpink;
+    padding: 4vw;
+    font-size: 4em;
+    font-family: "palladio", serif;
+    text-align: center;
+    text-transform: uppercase;
+    background: radial-gradient(ellipse at center,#0a2e39 0%, black 100% );
+    display: block;
+    
+}
+sw-countdown h3 {
+    
 }
 sw-countdown h4 {
-    color: blue;
+    border: 2px solid white;
+    background: radial-gradient(ellipse at center,#0a2e39 0%, black 100% );
+    color: hotpink;
+    display: block;
+    font-size: 6em;
+    font-family: "palladio", serif;
+    padding: 1em;
+    text-align: center;
+}
+
+sw-countdown h4 span {
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: black;
+    padding: 5px;
+}
+
+sw-countdown h4 span:hover {
+    background-color: hotpink;
+    color:black;
+
 }
