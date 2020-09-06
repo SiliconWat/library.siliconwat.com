@@ -1,8 +1,8 @@
 hb-avatar img {
-    border: 5px inset blue;
+    border-radius: 25%;
 }
 hb-avatar label {
-    color: blue;
+    color: palevioletred;
 }
 hb-avatar input {
     outline: 2px solid blue;
