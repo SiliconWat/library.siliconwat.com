@@ -34,6 +34,7 @@ export class SwTimer extends HTMLElement {
         const timer = new SetInterval(() => {
             if (hours.value == 0 && minutes.value == 0 && seconds.value == 0) {
                 timer.stop()
+                this.dispatchEvent(new Event("done"))
             }
             else {
                 if (seconds.value == 0) {

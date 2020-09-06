@@ -48,5 +48,26 @@ customElements.define("sw-countdown", SwCountDown)
 import {SwTimer} from "./elements/sw-timer.mjs"
 customElements.define("sw-timer", SwTimer)
 
+///////////////
+
 const countdown = document.querySelector("sw-countdown")
 //countdown.addEventListener("done", () => alert("Surprise! You win!"))
+
+const firebaseConfig = {
+    apiKey: "AIzaSyD0yaO6l8kQw9zxHmSHs0gney9rM2Gbf9M",
+    authDomain: "silicon-wat.firebaseapp.com",
+    databaseURL: "https://silicon-wat.firebaseio.com",
+    projectId: "silicon-wat",
+    storageBucket: "silicon-wat.appspot.com",
+    messagingSenderId: "460247639477",
+    appId: "1:460247639477:web:6aca765d659417fd80e5fc",
+    measurementId: "G-FWZCEFDZ93"
+  };
+
+  firebase.initializeApp(firebaseConfig)
+
+  const signup2 = document.querySelector("hb-signup")
+  signup2.addEventListener("success", () => console.log("successfully signed up"))
+
+  const login = document.querySelector("hb-login")
+  login.addEventListener("success", () => console.log("logged in"))
