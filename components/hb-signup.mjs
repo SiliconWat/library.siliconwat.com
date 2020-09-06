@@ -24,17 +24,11 @@ export class HbSignup extends HTMLElement {
 
     signUp(event) {
         event.preventDefault()
-        const data = new FormData(event.target)
-        console.log(data.get("email"))
+        const formData = new FormData(event.target)
+        const p = this.querySelector("p")
 
-        firebase.auth().createUserWithEmailAndPassword(email, password)
-	    .then(() => console.log("signed up but need to verify email"))
-	    .catch(error => console.error(error.message))
+        window.firebase.auth().createUserWithEmailAndPassword(formData.get("email"), formData.get("password"))
+	    .then(() => this.dispatchEvent(new Event("success")))
+	    .catch(error => p.textContent = error.message)
     }
-}
-
-function signUp(email, password) {
-	firebase.auth().createUserWithEmailAndPassword(email, password)
-	.then(() => console.log("signed up but need to verify email"))
-	.catch(error => console.error(error.message))
 }

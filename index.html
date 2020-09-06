@@ -2,6 +2,11 @@
     <head>
         <title>Silicon Wat Library</title>
         <link rel="stylesheet" href="index.css">
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
         <script type="module" src="index.js"></script>
     </head>
     <body>
@@ -142,11 +147,12 @@
         <section>
             <hb-login>
                 <form>
-                    <input id="email" type="email" placeholder="Email"/>
-                    <input type="password" placeholder="Password"/>
-                    <input id="login" type="submit" value="Log in" onclick="login()"/>
-                    <input type="submit" id="forgotpassword" value="Forgot password" onclick="forgotPassword()"/>
+                    <input name="email" type="email" placeholder="Email"/>
+                    <input name="password" type="password" placeholder="Password"/>
+                    <button type="submit">Login</button>
+                    <button>Forgot password</button>
                 </form>
+                <p></p>
             </hb-login>
       </section>
         <section>
@@ -156,6 +162,7 @@
                     <input type="password" name="password" placeholder="Password"/>
                     <button type="submit">sign up</button>
                 </form>
+                <p></p>
             </hb-signup>
         </section>
         <section>
