@@ -90,9 +90,9 @@
         </section>
         <section>
             <hb-avatar>
-                <img src="https://lh3.googleusercontent.com/46rSiA41hKKjTJ19If8WbNXYJ3H5268Y0BLo2Cr5X0aDwKMPdQdFaGfE8r2-Evza_SJf=s85" slot="image" />
+                <img src="https://lh3.googleusercontent.com/46rSiA41hKKjTJ19If8WbNXYJ3H5268Y0BLo2Cr5X0aDwKMPdQdFaGfE8r2-Evza_SJf=s85" />
                 <label >Change Photo</label>
-                <input type="file" slot="upload-image"/>
+                <input type="file"/>
             </hb-avatar>
         </section>
         <section>
@@ -128,17 +128,20 @@
         </section>
         <section>
             <hb-card-payment>
-                <h2 slot="paymentsection">Payment Settings</h2>
-                <h3 slot="title">Credit Card</h3>
-                <label >Name on card:</label>
-                <input placeholder="Name on card" />
-                <label >Card number:</label>
-                <input placeholder="Card number" />
-                <label >Expiration date:</label>
-                <input type="date" placeholder="Expiration date" />
-                <label >Security code</label>
-                <input placeholder="Security code" />
-                <input type="submit" />
+                <form>
+                    <h2 slot="paymentsection">Payment Settings</h2>
+                    <h3 slot="title">Credit Card</h3>
+                    <label >Name on card:</label>
+                    <input placeholder="Name on card" />
+                    <label >Card number:</label>
+                    <input placeholder="Card number" />
+                    <label >Expiration date:</label>
+                    <input type="date" placeholder="Expiration date" />
+                    <label >Security code</label>
+                    <input placeholder="Security code" />
+                    <input type="submit" />
+                </form>
+                
             </hb-card-payment>
         </section>
         <section>
@@ -157,7 +160,7 @@
                 <form>
                     <input type="email" name="email" placeholder="Email"/>
                     <input type="password" name="password" placeholder="Password"/>
-                    <button type="submit">Sign Up</button>
+                    <button type="submit">sign up</button>
                 </form>
                 <p></p>
             </hb-signup>

@@ -1,4 +1,18 @@
-hb-login input {
-    padding: 5px;
-    border: 2px solid blue;
+hb-login form {
+    display: flex;
+    flex-direction: column;
+}
+hb-login input, hb-signup button {
+    background-color: palevioletred;
+    border: 2px solid silver;
+    font-size: 1.25em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+}
+
+hb-login input:hover {
+    border: 1em solid #fc80a5;
+    border-radius: 1em;
 }
