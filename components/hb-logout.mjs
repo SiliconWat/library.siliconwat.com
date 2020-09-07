@@ -24,7 +24,7 @@ export class HbLogout extends HTMLElement {
     logout(event) {
         event.preventDefault()
         const formData = new FormData(event.target)
-        const p = this.querySelector("p")
+        
         
         firebase.auth().signOut()
 	    .then(() => this.dispatchEvent(new Event("successly logout")))
