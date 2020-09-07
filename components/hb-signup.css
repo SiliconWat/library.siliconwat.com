@@ -1,6 +1,6 @@
 
 
-hb-signup form {
+hb-sign-up form {
     display: flex;
     flex-direction: column;
     font-family: "Permanent Marker", cursive; ;
@@ -15,7 +15,7 @@ hb-signup form {
     
 }
 
-hb-signup input, hb-signup button {
+hb-sign-up input, hb-sign-up button {
     background-color: palevioletred;
     border: 2px solid silver;
     font-size: 1.25em;
@@ -25,7 +25,7 @@ hb-signup input, hb-signup button {
     padding: 1em;
 }
 
-hb-signup button {
+hb-sign-up button {
     background-color: #c8c8cd;
 
 }

@@ -1,4 +1,4 @@
-export default class TpUl extends HTMLUListElement {
+export class TpUl extends HTMLUListElement {
     constructor() {
         super();
 

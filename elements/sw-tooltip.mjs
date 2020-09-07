@@ -1,4 +1,4 @@
-export default class SwTooltip extends HTMLElement {
+export class SwTooltip extends HTMLElement {
     constructor() {
         super()
         

@@ -9,7 +9,7 @@ template.innerHTML = `
     <slot></slot>
 `
 
-export default class SwInfoCard extends HTMLElement{
+export class SwInfoCard extends HTMLElement{
     constructor(){
         super();
         this.attachShadow({mode: "open"});

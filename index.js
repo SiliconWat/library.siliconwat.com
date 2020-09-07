@@ -1,10 +1,7 @@
-import TpInput from "./tags/tp-input.mjs"
+import {TpInput} from "./tags/tp-input.mjs"
 customElements.define("tp-input", TpInput, {extends: "input"})
 
-//import HbSignup from "./components/hb-signup.mjs"
-//customElements.define("hb-signup", HbSignup)
-
-import SwTooltip from "./elements/sw-tooltip.mjs"
+import {SwTooltip} from "./elements/sw-tooltip.mjs"
 customElements.define("sw-tooltip", SwTooltip)
 
 import {SwTabs, SwTab, SwPanel} from "./elements/sw-tabs.mjs"
@@ -12,10 +9,10 @@ customElements.define("sw-tabs", SwTabs)
 customElements.define("sw-tab", SwTab)
 customElements.define("sw-panel", SwPanel)
 
-import TpUl from "./tags/tp-ul.mjs"
+import {TpUl} from "./tags/tp-ul.mjs"
 customElements.define("tp-ul", TpUl, {extends: "ul"})
 
-import SwInfoCard from "./elements/sw-info-card.mjs"
+import {SwInfoCard} from "./elements/sw-info-card.mjs"
 customElements.define("sw-info-card", SwInfoCard)
 
 import {SwHeroCard} from "./elements/sw-hero-card.mjs"
@@ -40,7 +37,7 @@ import {HbLogin} from "./components/hb-login.mjs"
 customElements.define("hb-login", HbLogin)
 
 import {HbSignup} from "./components/hb-signup.mjs"
-customElements.define("hb-signup", HbSignup)
+customElements.define("hb-sign-up", HbSignup)
 
 import {SwCountDown} from "./elements/sw-countdown.mjs"
 customElements.define("sw-countdown", SwCountDown)
@@ -64,10 +61,10 @@ const firebaseConfig = {
     measurementId: "G-FWZCEFDZ93"
   };
 
-  firebase.initializeApp(firebaseConfig)
+  firebase.initializeApp(firebaseConfig);
 
-  const signup2 = document.querySelector("hb-signup")
-  signup2.addEventListener("success", () => console.log("successfully signed up"))
+  const signup = document.querySelector("hb-signup");
+  signup.addEventListener("success", () => console.log("successfully signed up"))
 
   const login = document.querySelector("hb-login")
   login.addEventListener("success", () => console.log("logged in"))
