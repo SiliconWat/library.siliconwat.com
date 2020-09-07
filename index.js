@@ -48,6 +48,9 @@ customElements.define("sw-countdown", SwCountDown)
 import {SwTimer} from "./elements/sw-timer.mjs"
 customElements.define("sw-timer", SwTimer)
 
+import {HbLogout} from "./components/hb-logout.mjs"
+customElements.define("hb-logout", HbLogout)
+
 ///////////////
 
 const countdown = document.querySelector("sw-countdown")
