@@ -10,8 +10,9 @@
         <script type="module" src="index.js"></script>
     </head>
     <body>
-        <input is="sw-input" />
-        <hb-signup></hb-signup>
+        <section>
+            <input is="sw-input" />
+        </section>
         <section>
             <label for="tpi">Name:</label>
             <input id="tpi" aria-describedby="tp" />
@@ -158,17 +159,18 @@
         <section>
             <hb-logout>
                 <button>Logout</button>
+                <p></p>
             </hb-logout>
         </section>
         <section>
-            <hb-sign-up>
+            <hb-signup>
                 <form>
                     <input type="email" name="email" placeholder="Email"/>
                     <input type="password" name="password" placeholder="Password"/>
                     <button type="submit">sign up</button>
                 </form>
                 <p></p>
-            </hb-sign-up>
+            </hb-signup>
         </section>
         <section>
             <sw-countdown>

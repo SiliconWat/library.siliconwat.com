@@ -12,3 +12,8 @@
 @import "./components/hb-login.css";
 @import "./components/hb-signup.css";
 @import "./components/hb-logout.css";
+
+body {
+    display: flex;
+    flex-direction: column;
+}

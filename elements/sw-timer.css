@@ -10,7 +10,6 @@ sw-timer form label {
     color: hotpink;
     font-family: "palladio", serif;
     font-size: 3em;
-    position: relative;
   }
 
 sw-timer input {

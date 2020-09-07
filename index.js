@@ -37,7 +37,7 @@ import {HbLogin} from "./components/hb-login.mjs"
 customElements.define("hb-login", HbLogin)
 
 import {HbSignup} from "./components/hb-signup.mjs"
-customElements.define("hb-sign-up", HbSignup)
+customElements.define("hb-signup", HbSignup)
 
 import {SwCountDown} from "./elements/sw-countdown.mjs"
 customElements.define("sw-countdown", SwCountDown)
@@ -51,7 +51,12 @@ customElements.define("hb-logout", HbLogout)
 ///////////////
 
 const countdown = document.querySelector("sw-countdown")
-//countdown.addEventListener("done", () => alert("Surprise! You win!"))
+countdown.addEventListener("done", () => console.log("Surprise! You win!"))
+
+const timer = document.querySelector("sw-timer")
+timer.addEventListener("done", () => console.log("Timer done!"))
+
+//////
 
 const firebaseConfig = {
     apiKey: "AIzaSyD0yaO6l8kQw9zxHmSHs0gney9rM2Gbf9M",
@@ -66,8 +71,21 @@ const firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
 
+  firebase.auth().onAuthStateChanged(user => {
+	if (user) {
+		console.log(user.uid, user.email)
+	} else {
+		console.log("not logged in")
+	}
+})
+
+///////
+
   const signup = document.querySelector("hb-signup");
-  signup.addEventListener("success", () => console.log("successfully signed up"))
+  signup.addEventListener("success", () => console.log("signed up"))
 
   const login = document.querySelector("hb-login")
   login.addEventListener("success", () => console.log("logged in"))
+
+  const logout = document.querySelector("hb-logout")
+  logout.addEventListener("success", () => console.log("logged out"))
