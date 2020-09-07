@@ -59,14 +59,13 @@ timer.addEventListener("done", () => console.log("Timer done!"))
 //////
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD0yaO6l8kQw9zxHmSHs0gney9rM2Gbf9M",
-    authDomain: "silicon-wat.firebaseapp.com",
-    databaseURL: "https://silicon-wat.firebaseio.com",
-    projectId: "silicon-wat",
-    storageBucket: "silicon-wat.appspot.com",
-    messagingSenderId: "460247639477",
-    appId: "1:460247639477:web:6aca765d659417fd80e5fc",
-    measurementId: "G-FWZCEFDZ93"
+    apiKey: "AIzaSyBEq8K__HeZr75Q7tDyNuMX1wnLGMsIIKU",
+    authDomain: "siliconwat.firebaseapp.com",
+    databaseURL: "https://siliconwat.firebaseio.com",
+    projectId: "siliconwat",
+    storageBucket: "siliconwat.appspot.com",
+    messagingSenderId: "140538393451",
+    appId: "1:140538393451:web:b1f8b5190f78e865a4122e"
   };
 
   firebase.initializeApp(firebaseConfig);
