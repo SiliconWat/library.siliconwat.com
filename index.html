@@ -99,32 +99,42 @@
         <section>
             <hb-account>  
                 <h2>Account Settings</h2>
-                <form>
-                <b>pan@siliconwat.com</b>
-                <input type="submit" value="Send Email Verification"/>
-                </form>
-                <form>
-                <label>Change Username:</label>
-                <input placeholder="New Username" />
-                <input type="submit" />
-                </form>
-                <form>
-                <label >Change Email:</label>
-                <input placeholder="New Email" />
-                <input type="password" placeholder="Current Password" />
-                <input type="submit" />
-                </form>
-                <form >
-                <label >Change Password:</label>
-                <input placeholder="New Password" />
-                <input type="password" placeholder="Current Password" />
-                <input type="submit" />
-                </form>
-                <form>
-                <label >Delete Account:</label>
-                <input type="password" placeholder="Current Password" />
-                <input type="submit" />
-                </form>
+                <hb-account-verify>
+                    <form>
+                        <b>pan@siliconwat.com</b>
+                        <button type="submit">Send Email Verification</button>
+                    </form>
+                </hb-account-verify>
+                <hb-account-username>
+                    <form>
+                        <label>Change Username:</label>
+                        <input placeholder="New Username" />
+                        <button type="submit">Submit</button>
+                    </form>
+                </hb-account-username>
+                <hb-account-email>
+                    <form>
+                        <label >Change Email:</label>
+                        <input placeholder="New Email" />
+                        <input type="password" placeholder="Current Password" />
+                        <button type="submit">Submit</button>
+                    </form>
+                </hb-account-email>
+                <hb-account-password>
+                    <form>
+                        <label>Change Password:</label>
+                        <input placeholder="New Password" />
+                        <input type="password" placeholder="Current Password" />
+                        <button type="submit">Submit</button>
+                    </form>
+                </hb-account-password>
+                <hb-account-delete>
+                    <form>
+                        <label >Delete Account:</label>
+                        <input type="password" placeholder="Current Password" />
+                        <button type="submit">Submit</button>
+                    </form>
+                </hb-account-delete>
             </hb-account>
         </section>
         <section>
@@ -151,7 +161,7 @@
                     <input name="email" type="email" placeholder="Email"/>
                     <input name="password" type="password" placeholder="Password"/>
                     <button type="submit">Login</button>
-                    <button>Forgot password</button>
+                    <button type="button">Forgot password</button>
                 </form>
                 <p></p>
             </hb-login>
@@ -159,7 +169,6 @@
         <section>
             <hb-logout>
                 <button>Logout</button>
-                <p></p>
             </hb-logout>
         </section>
         <section>

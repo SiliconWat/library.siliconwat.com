@@ -30,8 +30,13 @@ customElements.define("hb-avatar", HbAvatar)
 import {HbCardPayment} from "./components/hb-card-payment.mjs"
 customElements.define("hb-card-payment", HbCardPayment)
 
-import {HbAccount} from "./components/hb-account.mjs"
+import {HbAccount, HbAccountVerify, HbAccountUsername, HbAccountEmail, HbAccountPassword, HbAccountDelete} from "./components/hb-account.mjs"
 customElements.define("hb-account", HbAccount)
+customElements.define("hb-account-verify", HbAccountVerify)
+customElements.define("hb-account-username", HbAccountUsername)
+customElements.define("hb-account-email", HbAccountEmail)
+customElements.define("hb-account-password", HbAccountPassword)
+customElements.define("hb-account-delete", HbAccountDelete)
 
 import {HbLogin} from "./components/hb-login.mjs"
 customElements.define("hb-login", HbLogin)
@@ -81,10 +86,16 @@ const firebaseConfig = {
 ///////
 
   const signup = document.querySelector("hb-signup");
+  signup.addEventListener("submit", () => console.log("spinner on..."))
   signup.addEventListener("success", () => console.log("signed up"))
+  signup.addEventListener("done", () => console.log("spinner off"))
 
   const login = document.querySelector("hb-login")
-  login.addEventListener("success", () => console.log("logged in"))
+  login.addEventListener("login success", () => console.log("logged in"))
+  login.addEventListener("forgot password success", () => console.log("reset email sent"))
 
   const logout = document.querySelector("hb-logout")
   logout.addEventListener("success", () => console.log("logged out"))
+
+  const accountverify = document.querySelector("hb-account-verify")
+  accountverify.addEventListener("success", () => console.log("verify email sent"))
