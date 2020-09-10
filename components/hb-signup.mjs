@@ -39,14 +39,14 @@ export class HbSignup extends HTMLElement {
     }
 
     disable() {
-        this.dispatchEvent(new Event("submit"))
+        this.dispatchEvent(new Event("submit"));
         this.email.disabled = true;
         this.password.disabled = true;
         this.button.disabled = true;
     }
 
     enable() {
-        this.dispatchEvent(new Event("done"))
+        this.dispatchEvent(new Event("done"));
         this.email.disabled = false;
         this.password.disabled = false;
         this.button.disabled = false;

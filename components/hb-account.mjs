@@ -8,7 +8,7 @@ template.innerHTML = `
     <slot></slot>
 `
 
-export class HbAccount extends HTMLElement{
+export class HbAccount extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: "open"});
@@ -16,7 +16,7 @@ export class HbAccount extends HTMLElement{
     }
 }
 
-export class HbAccountVerify extends HTMLElement{
+export class HbAccountVerify extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: "open"});
@@ -26,6 +26,10 @@ export class HbAccountVerify extends HTMLElement{
     }
 
     connectedCallback() {
+        const label = this.querySelector("label")
+        label.textContent = window.firebase.auth().currentUser.email
+        console.log("hi")
+
         const form = this.querySelector("form")
         form.addEventListener("submit", this.sendEmailVerification)
     }
@@ -49,7 +53,7 @@ export class HbAccountVerify extends HTMLElement{
     }
 }
 
-export class HbAccountUsername extends HTMLElement{
+export class HbAccountUsername extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: "open"});
@@ -57,7 +61,7 @@ export class HbAccountUsername extends HTMLElement{
     }
 }
 
-export class HbAccountEmail extends HTMLElement{
+export class HbAccountEmail extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: "open"});
@@ -65,7 +69,7 @@ export class HbAccountEmail extends HTMLElement{
     }
 }
 
-export class HbAccountPassword extends HTMLElement{
+export class HbAccountPassword extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: "open"});
@@ -73,7 +77,7 @@ export class HbAccountPassword extends HTMLElement{
     }
 }
 
-export class HbAccountDelete extends HTMLElement{
+export class HbAccountDelete extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({mode: "open"});
