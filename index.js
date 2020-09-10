@@ -95,11 +95,12 @@ const firebaseConfig = {
 
   const login = document.querySelector("hb-login")
 
-  login.addEventListener("login success", () => {
+  login.addEventListener("submit", () => {
     document.querySelector("img").src = "https://giphy.com/gifs/Pkck2unt0XQfc4gs3R/html5";
+    console.log("iamin")
   })
 
-  login.addEventListener("forgot password success", () => {
+  login.addEventListener("click", () => {
     document.querySelector("img").src = "https://giphy.com/gifs/Pkck2unt0XQfc4gs3R/html5";
     console.log("reset email sent")
   })
