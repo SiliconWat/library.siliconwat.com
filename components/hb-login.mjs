@@ -19,6 +19,7 @@ export class HbLogin extends HTMLElement {
         this.forgotButton = this.querySelector("button[type=button]")
         this.p = this.querySelector("p")
 
+        this.auth = window.firebase.auth()
         this.logIn = this.logIn.bind(this)
         this.forgotPassword = this.forgotPassword.bind(this)
     }
@@ -35,7 +36,7 @@ export class HbLogin extends HTMLElement {
         this.disable()
         this.p.textContent = ""
         
-        window.firebase.auth().signInWithEmailAndPassword(this.email.value, this.password.value)
+        this.auth.signInWithEmailAndPassword(this.email.value, this.password.value)
 	    .then(() => this.dispatchEvent(new CustomEvent("success", {detail: {type: "login"}})))
         .catch(error => this.p.textContent = error.message)
         .finally(() => this.enable())
@@ -46,7 +47,7 @@ export class HbLogin extends HTMLElement {
         this.disable()
         this.p.textContent = ""
 
-        window.firebase.auth().sendPasswordResetEmail(this.email.value)
+        this.auth.sendPasswordResetEmail(this.email.value)
         .then(() => this.dispatchEvent(new CustomEvent("success", {detail: {type: "forgot"}})))
         .catch(error => this.p.textContent = error.message)
         .finally(() => this.enable())
