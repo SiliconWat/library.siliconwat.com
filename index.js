@@ -96,5 +96,8 @@ timer.addEventListener("done", () => console.log("Timer done!"))
   const logout = document.querySelector("hb-logout")
   logout.addEventListener("success", () => console.log("logged out"))
 
-  const accountverify = document.querySelector("hb-account-verify")
-  accountverify.addEventListener("success", () => console.log("verify email sent"))
+  const accountVerify = document.querySelector("hb-account-verify")
+  accountVerify.addEventListener("success", () => console.log("verify email sent"))
+
+  const accountEmail = document.querySelector("hb-account-email")
+  accountEmail.addEventListener("success", () => console.log("email has been updated"))

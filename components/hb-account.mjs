@@ -59,6 +59,11 @@ export class HbAccountVerify extends HTMLElement {
     }
 }
 
+function reauth(currentUser, password) {
+    const credential = window.firebase.auth.EmailAuthProvider.credential(currentUser.email, password)
+    return currentUser.reauthenticateWithCredential(credential)
+}
+
 export class HbAccountUsername extends HTMLElement {
     constructor() {
         super();
@@ -72,6 +77,46 @@ export class HbAccountEmail extends HTMLElement {
         super();
         this.attachShadow({mode: "open"});
         this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+        this.email = this.querySelector("input[type=email]")
+        this.password = this.querySelector("input[type=password]")
+        this.button = this.querySelector("button")
+
+        this.updateEmail = this.updateEmail.bind(this)
+    }
+
+    connectedCallback() {
+        const form = this.querySelector("form")
+        form.addEventListener("submit", this.updateEmail)
+    }
+
+    updateEmail(event) {
+        event.preventDefault()
+        this.disable()
+        
+        const currentUser = window.firebase.auth().currentUser
+        const p = this.querySelector("p")
+        p.textContent = ""
+
+        reauth(currentUser, this.password.value)
+            .then(() => currentUser.updateEmail(this.email.value))
+            .then(() => this.dispatchEvent(new Event("success")))
+            .catch(error => p.textContent = error.message)
+            .finally(() => this.enable())
+    }
+
+    disable() {
+        this.dispatchEvent(new Event("submit"))
+        this.email.disabled = true
+        this.password.disabled = true
+        this.button.disabled = true
+    }
+
+    enable() {
+        this.dispatchEvent(new Event("done"))
+        this.email.disabled = false
+        this.password.disabled = false
+        this.button.disabled = false
     }
 }
 
