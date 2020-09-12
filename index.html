@@ -114,9 +114,9 @@
                 </hb-account-username>
                 <hb-account-email>
                     <form>
-                        <label >Change Email:</label>
-                        <input type="email" placeholder="New Email" />
-                        <input type="password" placeholder="Current Password" />
+                        <label>Change Email:</label>
+                        <input name="newemail" type="email" placeholder="New Email" />
+                        <input name="password" type="password" placeholder="Current Password" />
                         <button type="submit">Submit</button>
                     </form>
                     <p></p>
@@ -124,14 +124,15 @@
                 <hb-account-password>
                     <form>
                         <label>Change Password:</label>
-                        <input placeholder="New Password" />
-                        <input type="password" placeholder="Current Password" />
+                        <input name="newpassword" type="password" placeholder="New Password" />
+                        <input name="password" type="password" placeholder="Current Password" />
                         <button type="submit">Submit</button>
                     </form>
+                    <p></p>
                 </hb-account-password>
                 <hb-account-delete>
                     <form>
-                        <label >Delete Account:</label>
+                        <label>Delete Account:</label>
                         <input type="password" placeholder="Current Password" />
                         <button type="submit">Submit</button>
                     </form>
