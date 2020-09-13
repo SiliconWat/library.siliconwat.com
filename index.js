@@ -89,7 +89,7 @@ timer.addEventListener("done", () => console.log("Timer done!"))
   signup.addEventListener("submit", () => console.log("spinner on"))
   signup.addEventListener("success", () => console.log("signed up"))
   signup.addEventListener("done", () => console.log("spinner off"))
-  signup.addEventListener("user", event => console.log(event.detail.data))
+  //signup.addEventListener("user", event => console.log(event.detail.data))
 
   const login = document.querySelector("hb-login")
   login.addEventListener("success", event => console.log("success:", event.detail.type))
@@ -105,3 +105,6 @@ timer.addEventListener("done", () => console.log("Timer done!"))
 
   const accountPassword = document.querySelector("hb-account-password")
   accountPassword.addEventListener("success", () => console.log("password has been updated"))
+
+  const accountUsername = document.querySelector("hb-account-username")
+  accountUsername.addEventListener("success", event => console.log("success:", event.detail.username))
