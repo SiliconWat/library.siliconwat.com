@@ -108,3 +108,6 @@ timer.addEventListener("done", () => console.log("Timer done!"))
 
   const accountUsername = document.querySelector("hb-account-username")
   accountUsername.addEventListener("success", event => console.log("success:", event.detail.username))
+
+  const avatar = document.querySelector("hb-avatar")
+  avatar.addEventListener("success", event => console.log(event.detail.type, event.detail.url))
