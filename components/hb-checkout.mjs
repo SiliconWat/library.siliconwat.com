@@ -28,7 +28,7 @@ export class HbCheckout extends HTMLElement{
 
     checkout(event) {
         event.preventDefault()
-        const stripe = Stripe(this.getAttribute("stripe-pk-live"))
+        const stripe = Stripe(this.getAttribute("stripe-pk"))
 
         stripe.redirectToCheckout({
             lineItems: [{price: this.getAttribute("stripe-api-id"), quantity: 1}],
