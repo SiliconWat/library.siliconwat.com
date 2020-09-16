@@ -14,6 +14,7 @@ export class HbCheckout extends HTMLElement{
         this.attachShadow({mode: "open"});
         this.shadowRoot.appendChild(template.content.cloneNode(true));
 
+        this.button = this.querySelector("button")
         this.checkout = this.checkout.bind(this)
     }
 
@@ -28,6 +29,7 @@ export class HbCheckout extends HTMLElement{
 
     checkout(event) {
         event.preventDefault()
+        this.disable()
         const stripe = Stripe(this.getAttribute("stripe-pk"))
 
         stripe.redirectToCheckout({
@@ -42,8 +44,19 @@ export class HbCheckout extends HTMLElement{
             cancelUrl: this.getAttribute("stripe-cancel-url"),
           })
           .then(result => { 
-            const p = this.querySelector("p")
-            if (result.error) p.textContent = result.error.message 
+            this.dispatchEvent(new Event("success"))
+            if (result.error) this.querySelector("p").textContent = result.error.message 
         })
+        .then(() => this.enable())
+    }
+
+    disable() {
+        this.dispatchEvent(new Event("submit"))
+        this.button.disabled = true
+    }
+
+    enable() {
+        this.dispatchEvent(new Event("done"))
+        this.button.disabled = false
     }
 }
