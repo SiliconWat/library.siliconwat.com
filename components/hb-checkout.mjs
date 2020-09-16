@@ -38,8 +38,8 @@ export class HbCheckout extends HTMLElement{
             // a successful payment.
             // Instead use one of the strategies described in
             // https://stripe.com/docs/payments/checkout/fulfillment
-            successUrl: 'https://siliconwat.com/success',
-            cancelUrl: 'https://siliconwat.com/canceled',
+            successUrl: this.getAttribute("stripe-success-url"),
+            cancelUrl: this.getAttribute("stripe-cancel-url"),
           })
           .then(result => { 
             const p = this.querySelector("p")
