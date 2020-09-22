@@ -47,7 +47,7 @@ export class HbCheckout extends HTMLElement{
             this.dispatchEvent(new Event("success"))
             if (result.error) this.querySelector("p").textContent = result.error.message 
         })
-        .then(() => this.enable())
+        .finally(() => this.enable())
     }
 
     disable() {
