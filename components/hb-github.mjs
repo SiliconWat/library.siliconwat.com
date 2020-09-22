@@ -13,7 +13,7 @@ template.innerHTML = `
     </style>
     <slot></slot>
 `
-// https://developer.github.com/v4/explorer/
+//  https://developer.github.com/v4/explorer/
 const QUERY = `{"query":
 "query { \
     viewer { \
