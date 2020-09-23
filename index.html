@@ -1,6 +1,7 @@
 <html>
     <head>
         <title>Silicon Wat Library</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="index.css">
         <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
@@ -11,216 +12,236 @@
         <script type="module" src="index.js"></script>
     </head>
     <body>
-        <section>
-            <input is="sw-input" />
-        </section>
-        <section>
-            <label for="tpi">Name:</label>
-            <input id="tpi" aria-describedby="tp" />
-            <sw-tooltip id="tp">Please enter your name</sw-tooltip>
-            <img src="https://via.placeholder.com/50x50" aria-describedby="tpfood" tabindex="10"/>
-            <sw-tooltip id="tpfood">Picture of your favorite food</sw-tooltip>
-        </section>
-        <section>
+        <header>
+            <h1>Silicon Wat Library</h1>
+        </header>
+        <main>
             <sw-tabs>
-                <sw-tab role="heading" slot="tab">Tab 1</sw-tab>
-                <sw-panel role="region" slot="panel">Content 1</sw-panel>
-                <sw-tab role="heading" slot="tab">Tab 2</sw-tab>
-                <sw-panel role="region" slot="panel">Content 2</sw-panel>
-                <sw-tab role="heading" slot="tab">Tab 3</sw-tab>
+                <sw-tab role="heading" slot="tab">Sign Up</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-signup>
+                        <form>
+                            <input type="email" name="email" placeholder="Email"/>
+                            <input type="password" name="password" placeholder="Password"/>
+                            <button type="submit">sign up</button>
+                        </form>
+                        <p></p>
+                    </hb-signup>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Log In</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-login>
+                        <form>
+                            <input name="email" type="email" placeholder="Email"/>
+                            <input name="password" type="password" placeholder="Password"/>
+                            <button type="submit">Login</button>
+                            <button type="button">Forgot password</button>
+                        </form>
+                        <p></p>
+                    </hb-login>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Log Out</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-logout>
+                        <button>Logout</button>
+                    </hb-logout>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Avatar</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-avatar>
+                        <img width="200" />
+                        <span></span>
+                        <label>Change Avatar</label>
+                        <input type="file" accept="image/png, image/jpeg, image/jpg, image/gif" />
+                        <button>Delete Avatar</button>
+                        <p></p>
+                    </hb-avatar>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Account Settings</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-account>  
+                        <h2>Account Settings</h2>
+                        <hb-account-verify>
+                            <form>
+                                <label>No Email</label>
+                                <button type="submit">Send Email Verification</button>
+                            </form>
+                        </hb-account-verify>
+                        <hb-account-username>
+                            <form>
+                                <label>Change Username:</label>
+                                <input name="newusername" placeholder="New Username" />
+                                <input name="password" type="password" placeholder="Current Password" />
+                                <button type="submit">Submit</button>
+                            </form>
+                            <p></p>
+                        </hb-account-username>
+                        <hb-account-email>
+                            <form>
+                                <label>Change Email:</label>
+                                <input name="newemail" type="email" placeholder="New Email" />
+                                <input name="password" type="password" placeholder="Current Password" />
+                                <button type="submit">Submit</button>
+                            </form>
+                            <p></p>
+                        </hb-account-email>
+                        <hb-account-password>
+                            <form>
+                                <label>Change Password:</label>
+                                <input name="newpassword" type="password" placeholder="New Password" />
+                                <input name="password" type="password" placeholder="Current Password" />
+                                <button type="submit">Submit</button>
+                            </form>
+                            <p></p>
+                        </hb-account-password>
+                        <hb-account-delete>
+                            <form>
+                                <label>Delete Account:</label>
+                                <input type="password" placeholder="Current Password" />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </hb-account-delete>
+                    </hb-account>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Credit Card</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-card-payment>
+                        <form>
+                            <h2 slot="paymentsection">Payment Settings</h2>
+                            <h3 slot="title">Credit Card</h3>
+                            <label >Name on card:</label>
+                            <input placeholder="Name on card" />
+                            <label >Card number:</label>
+                            <input placeholder="Card number" />
+                            <label >Expiration date:</label>
+                            <input type="date" placeholder="Expiration date" />
+                            <label >Security code</label>
+                            <input placeholder="Security code" />
+                            <input type="submit" />
+                        </form>
+                    </hb-card-payment>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Checkout</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <hb-checkout stripe-pk="pk_test_UAIOF8jAMfEeF7jMoAo4yl6a" stripe-api-id="price_1HRqJzHkRWTAGSa4SGVIPOhF" stripe-success-url="https://library.siliconwat.com/?stripe=success" stripe-cancel-url="https://library.siliconwat.com/?stripe=cancel">
+                        <form>
+                            <label>Item 1: ...</label>
+                            <button role="link" type="submit">Checkout</button>
+                            <p></p>
+                        </form>
+                    </hb-checkout>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">GitHub Login</sw-tab>
                 <sw-panel role="region" slot="panel">Content 3</sw-panel>
-              </sw-tabs>
-        </section>
-        <section>
-            <ul is="tp-ul">
-                <li>UK
-                    <ul>
-                        <li>Yorkshire
+                <sw-tab role="heading" slot="tab">Timer</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <sw-timer summer>
+                        <form>
+                            <label>Study Time</label>
+                            <input name="hours" type="number" value="0" placeholder="hours" max="24" min="0" step="1"/>:
+                            <input name="minutes" type="number" value="0" placeholder="minutes" max="60" min="0" step="1"/>:
+                            <input name="seconds" type="number" value="3" placeholder="seconds" disabled/>
+                            <button type="submit">Start Countdown</button>
+                        </form>
+                    </sw-timer>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Countdown</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <sw-countdown>
+                        <h3>
+                            <span>0</span>
+                            <span>days</span> 
+                            left
+                        </h3>
+                        <h4>
+                            <span>0</span>
+                            :
+                            <span>0</span>
+                            :
+                            <span>3</span>
+                        </h4>
+                    </sw-countdown>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Search</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <sw-search>
+                        <input placeholder="search user" />
+                        <button>Search</button>
+                    </sw-search>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Progress</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <sw-progress>
+                        <label>Progress</label>
+                        <progress value="50" max="100"></progress>
+                    </sw-progress>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Hero Card</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <sw-hero-card>
+                        <h3>Fruit</h3>
+                        <img />
+                        <p>Hero Only</p>
+                    </sw-hero-card>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Info Card</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <sw-info-card>
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </sw-info-card>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Expandable List</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <ul is="tp-ul">
+                        <li>UK
                             <ul>
-                                <li>Leeds
+                                <li>Yorkshire
                                     <ul>
-                                        <li>Train station</li>
-                                        <li>Town hall</li>
-                                        <li>Headrow</li>
+                                        <li>Leeds
+                                            <ul>
+                                                <li>Train station</li>
+                                                <li>Town hall</li>
+                                                <li>Headrow</li>
+                                            </ul>
+                                        </li>
+                                        <li>Bradford</li>
+                                        <li>Hull</li>
                                     </ul>
                                 </li>
-                                <li>Bradford</li>
-                                <li>Hull</li>
                             </ul>
                         </li>
-                    </ul>
-                </li>
-                <li>USA
-                    <ul>
-                        <li>California
+                        <li>USA
                             <ul>
-                                <li>Los Angeles</li>
-                                <li>San Francisco</li>
-                                <li>Berkeley</li>
+                                <li>California
+                                    <ul>
+                                        <li>Los Angeles</li>
+                                        <li>San Francisco</li>
+                                        <li>Berkeley</li>
+                                    </ul>
+                                </li>
+                                <li>Nevada</li>
+                                <li>Oregon</li>
                             </ul>
                         </li>
-                        <li>Nevada</li>
-                        <li>Oregon</li>
                     </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <sw-info-card>
-                <h3>Title</h3>
-                <p>Description</p>
-            </sw-info-card>
-        </section>
-        <section>
-            <sw-hero-card>
-                <h3>Fruit</h3>
-                <img />
-                <p>Hero Only</p>
-            </sw-hero-card>
-        </section>
-        <section>
-            <sw-search>
-                <input placeholder="search user" />
-                <button>Search</button>
-            </sw-search>
-        </section>
-        <section>
-            <sw-progress>
-                <label>Progress</label>
-                <progress value="50" max="100"></progress>
-            </sw-progress>
-        </section>
-        <section>
-            <hb-avatar>
-                <img width="200" />
-                <span></span>
-                <label>Change Avatar</label>
-                <input type="file" accept="image/png, image/jpeg, image/jpg, image/gif" />
-                <button>Delete Avatar</button>
-                <p></p>
-            </hb-avatar>
-        </section>
-        <section>
-            <hb-account>  
-                <h2>Account Settings</h2>
-                <hb-account-verify>
-                    <form>
-                        <label>No Email</label>
-                        <button type="submit">Send Email Verification</button>
-                    </form>
-                </hb-account-verify>
-                <hb-account-username>
-                    <form>
-                        <label>Change Username:</label>
-                        <input name="newusername" placeholder="New Username" />
-                        <input name="password" type="password" placeholder="Current Password" />
-                        <button type="submit">Submit</button>
-                    </form>
-                    <p></p>
-                </hb-account-username>
-                <hb-account-email>
-                    <form>
-                        <label>Change Email:</label>
-                        <input name="newemail" type="email" placeholder="New Email" />
-                        <input name="password" type="password" placeholder="Current Password" />
-                        <button type="submit">Submit</button>
-                    </form>
-                    <p></p>
-                </hb-account-email>
-                <hb-account-password>
-                    <form>
-                        <label>Change Password:</label>
-                        <input name="newpassword" type="password" placeholder="New Password" />
-                        <input name="password" type="password" placeholder="Current Password" />
-                        <button type="submit">Submit</button>
-                    </form>
-                    <p></p>
-                </hb-account-password>
-                <hb-account-delete>
-                    <form>
-                        <label>Delete Account:</label>
-                        <input type="password" placeholder="Current Password" />
-                        <button type="submit">Submit</button>
-                    </form>
-                </hb-account-delete>
-            </hb-account>
-        </section>
-        <section>
-            <hb-card-payment>
-                <form>
-                    <h2 slot="paymentsection">Payment Settings</h2>
-                    <h3 slot="title">Credit Card</h3>
-                    <label >Name on card:</label>
-                    <input placeholder="Name on card" />
-                    <label >Card number:</label>
-                    <input placeholder="Card number" />
-                    <label >Expiration date:</label>
-                    <input type="date" placeholder="Expiration date" />
-                    <label >Security code</label>
-                    <input placeholder="Security code" />
-                    <input type="submit" />
-                </form>
-            </hb-card-payment>
-            <hb-checkout stripe-pk="pk_test_UAIOF8jAMfEeF7jMoAo4yl6a" stripe-api-id="price_1HRqJzHkRWTAGSa4SGVIPOhF" stripe-success-url="https://library.siliconwat.com/?stripe=success" stripe-cancel-url="https://library.siliconwat.com/?stripe=cancel">
-                <form>
-                    <label>Item 1: ...</label>
-                    <button role="link" type="submit">Checkout</button>
-                    <p></p>
-                </form>
-            </hb-checkout>
-        </section>
-        <section>
-            <hb-login>
-                <form>
-                    <input name="email" type="email" placeholder="Email"/>
-                    <input name="password" type="password" placeholder="Password"/>
-                    <button type="submit">Login</button>
-                    <button type="button">Forgot password</button>
-                </form>
-                <p></p>
-            </hb-login>
-        </section>
-        <section>
-            <hb-logout>
-                <button>Logout</button>
-            </hb-logout>
-        </section>
-        <section>
-            <hb-signup>
-                <form>
-                    <input type="email" name="email" placeholder="Email"/>
-                    <input type="password" name="password" placeholder="Password"/>
-                    <button type="submit">sign up</button>
-                </form>
-                <p></p>
-            </hb-signup>
-        </section>
-        <section>
-            <sw-countdown>
-                <h3>
-                    <span>0</span>
-                    <span>days</span> 
-                    left
-                </h3>
-                <h4>
-                    <span>0</span>
-                    :
-                    <span>0</span>
-                    :
-                    <span>3</span>
-                </h4>
-            </sw-countdown>
-        </section>
-        <section>
-            <sw-timer summer>
-                <form>
-                    <label>Study Time</label>
-                    <input name="hours" type="number" value="0" placeholder="hours" max="24" min="0" step="1"/>:
-                    <input name="minutes" type="number" value="0" placeholder="minutes" max="60" min="0" step="1"/>:
-                    <input name="seconds" type="number" value="3" placeholder="seconds" disabled/>
-                    <button type="submit">Start Countdown</button>
-                </form>
-            </sw-timer>
-        </section>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Tooltip</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <label for="tpi">Name:</label>
+                    <input id="tpi" aria-describedby="tp" />
+                    <sw-tooltip id="tp">Please enter your name</sw-tooltip>
+                    <img src="https://via.placeholder.com/50x50" aria-describedby="tpfood" tabindex="10"/>
+                    <sw-tooltip id="tpfood">Picture of your favorite food</sw-tooltip>
+                </sw-panel>
+                <sw-tab role="heading" slot="tab">Input</sw-tab>
+                <sw-panel role="region" slot="panel">
+                    <input is="sw-input" />
+                </sw-panel>
+            </sw-tabs>
+        </main>
+        <footer>
+            Silicon Wat &copy; 2020
+        </footer>
     </body>
 </html>

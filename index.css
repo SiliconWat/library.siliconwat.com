@@ -14,7 +14,18 @@
 @import "./components/hb-logout.css";
 @import "./components/hb-checkout.css";
 
-body {
-    display: flex;
-    flex-direction: column;
+sw-tabs {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+}
+
+sw-tab {
+    
+}
+
+sw-panel {
+    grid-column-start: 2; 
+    grid-column-end: 3; 
+    grid-row-start: 1; 
+    grid-row-end: 18; 
 }
